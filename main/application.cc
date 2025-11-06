@@ -1,6 +1,7 @@
 #include "application.h"
 #include "board.h"
 #include "display.h"
+#include "servo_control_board.h"
 #include "system_info.h"
 #include "audio_codec.h"
 #include "mqtt_protocol.h"
@@ -360,6 +361,13 @@ void Application::Start() {
     audio_service_.Initialize(codec);
     audio_service_.Start();
 
+    /* Setup this Servo */
+    scb.nictation();
+    scb.eyeball();
+    scb.speaking();
+    vTaskSuspend(scb.faceAction_chin_handle_);
+    // vTaskSuspend(scb.speaking_angulus_oris_handle_);
+
     AudioServiceCallbacks callbacks;
     callbacks.on_send_queue_available = [this]() {
         xEventGroupSetBits(event_group_, MAIN_EVENT_SEND_AUDIO);
@@ -541,6 +549,8 @@ void Application::Start() {
         // Play the success sound to indicate the device is ready
         audio_service_.PlaySound(Lang::Sounds::OGG_SUCCESS);
     }
+
+     scb.add_esp_now();
 }
 
 // Add a async task to MainLoop
@@ -694,6 +704,8 @@ void Application::SetDeviceState(DeviceState state) {
             display->SetChatMessage("system", "");
             break;
         case kDeviceStateListening:
+            vTaskSuspend(scb.faceAction_chin_handle_);
+
             display->SetStatus(Lang::Strings::LISTENING);
             display->SetEmotion("neutral");
 
@@ -714,6 +726,8 @@ void Application::SetDeviceState(DeviceState state) {
                 audio_service_.EnableWakeWordDetection(audio_service_.IsAfeWakeWord());
             }
             audio_service_.ResetDecoder();
+            vTaskResume(scb.faceAction_chin_handle_);
+
             break;
         default:
             // Do nothing
