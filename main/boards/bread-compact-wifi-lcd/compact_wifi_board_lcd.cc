@@ -129,7 +129,10 @@ private:
             if (app.GetDeviceState() == kDeviceStateStarting && !WifiStation::GetInstance().IsConnected()) {
                 ResetWifiConfiguration();
             }
-            app.ToggleChatState();
+            if(app.GetDeviceState()!=kDeviceStateListening)
+            {
+                app.ToggleChatState();
+            }
         });
     }
 
