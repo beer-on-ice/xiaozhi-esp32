@@ -1,0 +1,14 @@
+dependencies:
+  cmake_utilities:
+    version: 0.*
+  idf:
+    version: '>=5.0'
+description: An image rendering component for ESP-IDF, optimized for efficient playback.
+documentation: https://bellard.org/image_player/
+issues: https://github.com/espressif2022/image_player/issues
+repository: git://github.com/espressif2022/image_player.git
+repository_info:
+  commit_sha: 53cb09d00f46fc8cc36c014dc4344055ed18b603
+  path: .
+url: https://github.com/espressif2022/image_player
+version: 1.1.0
