@@ -24,7 +24,7 @@
 #define MQTT_USERNAME "xiaomai"
 #define MQTT_PASSWORD "xiaomai@123"
 
-#define MQTT_SUBSCRIBE_TOPIC "esp32c6/98:a3:16:8f:79:74/data/humanDetected"
+#define MQTT_SUBSCRIBE_TOPIC "esp32c6/98:A3:16:8F:79:74/data/humanDetected"
 
 class ServoControlBoard {
   public:
@@ -62,7 +62,7 @@ class ServoControlBoard {
     ServoControlBoard(const ServoControlBoard&) = delete;
     ServoControlBoard& operator=(const ServoControlBoard&) = delete;
 
-    std::string mac_ = "98:a3:16:e4:18:78";
+    std::string mac_ = "98:A3:16:E4:18:78";
 
     std::unique_ptr<Udp> udp_instance_;
     std::unique_ptr<Mqtt> mqtt_instance_;
