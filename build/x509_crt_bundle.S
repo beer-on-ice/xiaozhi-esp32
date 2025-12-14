@@ -1,4 +1,4 @@
-/* * Data converted from /Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /Users/doubao/Documents/xiaozhi-esp32/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

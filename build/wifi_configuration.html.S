@@ -1,4 +1,4 @@
-/* * Data converted from /Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/managed_components/78__esp-wifi-connect/assets/wifi_configuration.html
+/* * Data converted from /Users/doubao/Documents/xiaozhi-esp32/managed_components/78__esp-wifi-connect/assets/wifi_configuration.html
  * (null byte appended)
  */
 .data

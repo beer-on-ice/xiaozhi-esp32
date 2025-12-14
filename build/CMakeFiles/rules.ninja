@@ -2795,7 +2795,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /Users/doubao/.espressif/tools/cmake/3.30.2/CMake.app/Contents/bin/cmake --regenerate-during-build -S/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2 -B/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build
+  command = /Users/doubao/.espressif/tools/cmake/3.30.2/CMake.app/Contents/bin/cmake --regenerate-during-build -S/Users/doubao/Documents/xiaozhi-esp32 -B/Users/doubao/Documents/xiaozhi-esp32/build
   description = Re-running CMake...
   generator = 1
 

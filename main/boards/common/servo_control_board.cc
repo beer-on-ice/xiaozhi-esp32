@@ -60,15 +60,9 @@ void ServoControlBoard::add_mcp_tools() {
                            vTaskSuspend(faceAction_eyelid_handle_);
                            uart_write_bytes(UART_NUM_1, DM5_Speed_90_Position_115, sizeof(DM5_Speed_90_Position_115));
                            uart_write_bytes(UART_NUM_1, DM6_Speed_90_Position_115, sizeof(DM6_Speed_90_Position_115));
-                           uart_write_bytes(UART_NUM_1, DM0_Speed_18_Position_70, sizeof(DM0_Speed_18_Position_70));
-                           uart_write_bytes(UART_NUM_1, DM1_Speed_90_Position_60, sizeof(DM1_Speed_90_Position_60));
-                           uart_write_bytes(UART_NUM_1, DM2_Speed_90_Position_60, sizeof(DM2_Speed_90_Position_60));
                            vTaskDelay(pdMS_TO_TICKS(1000));
                            uart_write_bytes(UART_NUM_1, DM5_Speed_90_Position_65, sizeof(DM5_Speed_90_Position_65));
                            uart_write_bytes(UART_NUM_1, DM6_Speed_90_Position_65, sizeof(DM6_Speed_90_Position_65));
-                           uart_write_bytes(UART_NUM_1, DM0_Speed_18_Position_70, sizeof(DM0_Speed_18_Position_70));
-                           uart_write_bytes(UART_NUM_1, DM1_Speed_90_Position_120, sizeof(DM1_Speed_90_Position_120));
-                           uart_write_bytes(UART_NUM_1, DM2_Speed_90_Position_120, sizeof(DM2_Speed_90_Position_120));
                            vTaskDelay(pdMS_TO_TICKS(2 * 1000));
                            vTaskResume(faceAction_eyelid_handle_);
                            return true;
@@ -76,8 +70,8 @@ void ServoControlBoard::add_mcp_tools() {
     mcp_server.AddTool("self.face_action.wink", "脸部_动作->放个电", PropertyList(), [this](const PropertyList& properties) -> ReturnValue {
         vTaskSuspend(faceAction_eyelid_handle_);
         uart_write_bytes(UART_NUM_1, DM6_Speed_90_Position_115, sizeof(DM6_Speed_90_Position_115));
-        uart_write_bytes(UART_NUM_1, DM2_Speed_90_Position_120, sizeof(DM2_Speed_90_Position_120));
-        vTaskDelay(pdMS_TO_TICKS(2 * 1000));
+        uart_write_bytes(UART_NUM_1, DM2_Speed_90_Position_110, sizeof(DM2_Speed_90_Position_110));
+        vTaskDelay(pdMS_TO_TICKS(1000));
         vTaskResume(faceAction_eyelid_handle_);
         return true;
     });
@@ -243,8 +237,8 @@ void ServoControlBoard::init_mqtt() {
                             uart_write_bytes(UART_NUM_1, DM12_Speed_36_Position_60, sizeof(DM12_Speed_36_Position_60));
                         } else if (x_point->valuedouble > 0.22) {
                             uart_write_bytes(UART_NUM_1, DM12_Speed_36_Position_120, sizeof(DM12_Speed_36_Position_120));
-                            auto& app = Application::GetInstance();
-                            app.protocol_->Myself_SendText("有人!");
+                            // auto& app = Application::GetInstance();
+                            // app.protocol_->Myself_SendText("有人!");
                         } else {
                             uart_write_bytes(UART_NUM_1, DM12_Speed_18_Position_90, sizeof(DM12_Speed_18_Position_90));
                         }

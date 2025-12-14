@@ -3,5 +3,5 @@ source "/Users/doubao/esp/v5.5/esp-idf/components/esp_app_format/Kconfig.projbui
 source "/Users/doubao/esp/v5.5/esp-idf/components/esp_rom/Kconfig.projbuild"
 source "/Users/doubao/esp/v5.5/esp-idf/components/esptool_py/Kconfig.projbuild"
 source "/Users/doubao/esp/v5.5/esp-idf/components/partition_table/Kconfig.projbuild"
-source "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/main/Kconfig.projbuild"
-source "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/managed_components/espressif__esp-sr/Kconfig.projbuild"
+source "/Users/doubao/Documents/xiaozhi-esp32/main/Kconfig.projbuild"
+source "/Users/doubao/Documents/xiaozhi-esp32/managed_components/espressif__esp-sr/Kconfig.projbuild"

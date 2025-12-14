@@ -1,4 +1,4 @@
-# Install script for directory: /Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/managed_components/espressif__freetype
+# Install script for directory: /Users/doubao/Documents/xiaozhi-esp32/managed_components/espressif__freetype
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/esp-idf/espressif__freetype/output/cmake_install.cmake")
+  include("/Users/doubao/Documents/xiaozhi-esp32/build/esp-idf/espressif__freetype/output/cmake_install.cmake")
 endif()
 

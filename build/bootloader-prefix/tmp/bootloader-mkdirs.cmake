@@ -10,18 +10,18 @@ if(NOT EXISTS "/Users/doubao/esp/v5.5/esp-idf/components/bootloader/subproject")
   file(MAKE_DIRECTORY "/Users/doubao/esp/v5.5/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader"
-  "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix"
-  "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/tmp"
-  "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src/bootloader-stamp"
-  "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src"
-  "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader"
+  "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix"
+  "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/tmp"
+  "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src"
+  "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

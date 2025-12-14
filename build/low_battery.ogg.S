@@ -1,4 +1,4 @@
-/* * Data converted from /Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/main/assets/common/low_battery.ogg
+/* * Data converted from /Users/doubao/Documents/xiaozhi-esp32/main/assets/common/low_battery.ogg
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

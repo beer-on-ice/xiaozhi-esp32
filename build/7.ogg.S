@@ -1,4 +1,4 @@
-/* * Data converted from /Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/main/assets/locales/zh-CN/7.ogg
+/* * Data converted from /Users/doubao/Documents/xiaozhi-esp32/main/assets/locales/zh-CN/7.ogg
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

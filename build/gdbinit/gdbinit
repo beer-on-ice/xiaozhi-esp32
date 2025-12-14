@@ -1,2 +1,2 @@
-source /Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/gdbinit/symbols
-source /Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/gdbinit/connect
+source /Users/doubao/Documents/xiaozhi-esp32/build/gdbinit/symbols
+source /Users/doubao/Documents/xiaozhi-esp32/build/gdbinit/connect

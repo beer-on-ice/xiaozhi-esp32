@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/CMakeFiles/bootloader"
+			"file" : "/Users/doubao/Documents/xiaozhi-esp32/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/CMakeFiles/bootloader.rule"
+			"file" : "/Users/doubao/Documents/xiaozhi-esp32/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/Users/doubao/Documents/xiaozhi-esp32/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/Users/doubao/Documents/xiaozhi-esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

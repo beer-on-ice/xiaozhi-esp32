@@ -1,4 +1,4 @@
-# Install script for directory: /Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/managed_components/espressif__adc_mic
+# Install script for directory: /Users/doubao/Documents/xiaozhi-esp32/managed_components/espressif__adc_mic
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

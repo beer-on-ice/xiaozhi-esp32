@@ -1,4 +1,4 @@
-# Install script for directory: /Users/doubao/Documents/xiaozhi/xiaozhi-esp32s3-2.0.2.2/managed_components/espressif__esp-sr
+# Install script for directory: /Users/doubao/Documents/xiaozhi-esp32/managed_components/espressif__esp-sr
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
