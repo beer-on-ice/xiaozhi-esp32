@@ -255,7 +255,7 @@ void ServoControlBoard::init_mqtt() {
         }
     });
 
-    if (!mqtt_instance_->Connect(MQTT_ADDRESS, MQTT_PORT, MQTT_CLIENT_ID, MQTT_USERNAME, MQTT_PASSWORD)) {
+    if (!mqtt_instance_->Connect(MQTT_ADDRESS, MQTT_PORT, mac_, MQTT_USERNAME, MQTT_PASSWORD)) {
         ESP_LOGE(TAG, "Failed to connect to endpoint!");
     } else {
         mqtt_instance_->Subscribe(MQTT_SUBSCRIBE_TOPIC);
@@ -270,12 +270,12 @@ void ServoControlBoard::mqtt_publish(const std::string& text) {
     // char* json_str = cJSON_Print(root);
     // std::string str(json_str);
 
-    std::string payload = "{\"device_id\":" + mac_ + ",\"msg\":" + text + "}";
+    std::string payload = "{\"device_id\":\"" + mac_ + "\",\"msg\":\"" + text + "\"}";
     if (!mqtt_instance_->Publish(mqtt_publish_topic_log_deviceState_, payload)) {
         ESP_LOGE(TAG, "Failed to publish message: %s", text.c_str());
     }
 
-    mqtt_instance_->Publish(mqtt_publish_topic_mcp_mobileChassis_, payload);
+    // mqtt_instance_->Publish(mqtt_publish_topic_mcp_mobileChassis_, payload);
     // free(json_str);
     // cJSON_Delete(root);
 }

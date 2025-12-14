@@ -35,7 +35,7 @@ class ServoControlBoard {
 
     bool instruction_mode_ = false;
 
-    std::string mqtt_publish_topic_log_deviceState_ = "esp32s3/%02x:%02x:%02x:%02x:%02x:%02x/log/deviceStat";
+    std::string mqtt_publish_topic_log_deviceState_ = "esp32s3/%02x:%02x:%02x:%02x:%02x:%02x/log/deviceState";
     std::string mqtt_publish_topic_mcp_mobileChassis_ = "esp32s3/%02x:%02x:%02x:%02x:%02x:%02x/mcp/mobileChassis";
 
     /*基础动作*/
