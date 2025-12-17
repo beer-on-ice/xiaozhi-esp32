@@ -194,14 +194,12 @@ void ServoControlBoard::init_mqtt() {
     uint8_t mac[6];
     esp_err_t err = esp_read_mac(mac, ESP_MAC_WIFI_STA);
     if (err == ESP_OK) {
-        // char buf[18]; // 格式 "xx:xx:xx:xx:xx:xx" 共 17 字符 + 1 结尾 '\0'
-        // snprintf(buf, sizeof(buf), "%02x:%02x:%02x:%02x:%02x:%02x", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
-        // mac_ = std::string(buf);
-
-        char buf[44];
-        snprintf(buf, sizeof(buf), mqtt_publish_topic_log_deviceState_.c_str(), mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+        char buf[44]; // 格式 "xx:xx:xx:xx:xx:xx" 共 17 字符 + 1 结尾 '\0'
+        snprintf(buf, sizeof(buf), "%02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+        mac_ = std::string(buf);
+        snprintf(buf, sizeof(buf), mqtt_publish_topic_log_deviceState_.c_str(), mac_.c_str());
         mqtt_publish_topic_log_deviceState_ = std::string(buf);
-        snprintf(buf, sizeof(buf), mqtt_publish_topic_mcp_mobileChassis_.c_str(), mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+        snprintf(buf, sizeof(buf), mqtt_publish_topic_mcp_mobileChassis_.c_str(), mac_.c_str());
         mqtt_publish_topic_mcp_mobileChassis_ = std::string(buf);
 
         ESP_LOGW(TAG, "==>> WiFi STA MAC: %s", mac_.c_str());
@@ -212,7 +210,7 @@ void ServoControlBoard::init_mqtt() {
     }
     err = esp_read_mac(mac, ESP_MAC_WIFI_SOFTAP);
     if (err == ESP_OK) {
-        ESP_LOGW(TAG, "==>> WiFi AP MAC: %02x:%02x:%02x:%02x:%02x:%02x", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+        ESP_LOGW(TAG, "==>> WiFi AP MAC: %02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
     }
 
     auto network = Board::GetInstance().GetNetwork();
@@ -237,8 +235,11 @@ void ServoControlBoard::init_mqtt() {
                             uart_write_bytes(UART_NUM_1, DM12_Speed_36_Position_60, sizeof(DM12_Speed_36_Position_60));
                         } else if (x_point->valuedouble > 0.22) {
                             uart_write_bytes(UART_NUM_1, DM12_Speed_36_Position_120, sizeof(DM12_Speed_36_Position_120));
-                            // auto& app = Application::GetInstance();
-                            // app.protocol_->Myself_SendText("有人!");
+                                // auto& app = Application::GetInstance();
+                                // ESP_LOGE(TAG,"app.protocol_->IsAudioChannelOpened():: ",app.protocol_->IsAudioChannelOpened());
+                                // if (app.protocol_->IsAudioChannelOpened()) {
+                                //     app.protocol_->Myself_SendText("有人!");
+                                // }
                         } else {
                             uart_write_bytes(UART_NUM_1, DM12_Speed_18_Position_90, sizeof(DM12_Speed_18_Position_90));
                         }
