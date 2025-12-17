@@ -253,7 +253,7 @@ void ServoControlBoard::init_mqtt() {
     if (!mqtt_instance_->Connect(MQTT_ADDRESS, MQTT_PORT, mac_, MQTT_USERNAME, MQTT_PASSWORD)) {
         ESP_LOGE(TAG, "Failed to connect to endpoint!");
     } else {
-        mqtt_instance_->Subscribe(MQTT_SUBSCRIBE_TOPIC);
+        // mqtt_instance_->Subscribe(MQTT_SUBSCRIBE_TOPIC);
         // mqtt_instance_->Subscribe(mqtt_publish_topic_mcp_mobileChassis_);
     }
 }
