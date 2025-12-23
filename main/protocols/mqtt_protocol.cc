@@ -114,7 +114,7 @@ bool MqttProtocol::StartMqttClient(bool report_error) {
                 Application::GetInstance().Schedule([this]() {
                     CloseAudioChannel();
                     if (scb.faceAction_chin_handle_ != nullptr) {
-                        vTaskSuspend(scb.faceAction_chin_handle_); // W_TODO
+                        scb.stop_chin();
                         scb.mqtt_publish("待命中...");
                     }
                 });

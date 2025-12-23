@@ -363,3 +363,9 @@ void ServoControlBoard::sleepy() {
 
     uart_write_bytes(UART_NUM_1, DM12_Speed_18_Position_90, sizeof(DM12_Speed_18_Position_90));
 }
+
+void ServoControlBoard::stop_chin() {
+    uart_write_bytes(UART_NUM_1, DM0_Speed_18_Position_120, sizeof(DM0_Speed_18_Position_120));
+    vTaskSuspend(scb.faceAction_chin_handle_);
+    ESP_LOGI(TAG, "::stop_chin() -> Execution successful!");
+}
