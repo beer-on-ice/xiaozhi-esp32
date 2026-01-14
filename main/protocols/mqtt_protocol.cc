@@ -113,6 +113,7 @@ bool MqttProtocol::StartMqttClient(bool report_error) {
             if (session_id == nullptr || session_id_ == session_id->valuestring) {
                 Application::GetInstance().Schedule([this]() {
                     CloseAudioChannel();
+                    // W_TODO
                     if (scb.faceAction_chin_handle_ != nullptr) {
                         scb.stop_chin();
                         scb.mqtt_publish("待命中...");
